@@ -16,3 +16,20 @@
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+html {
+	overflow-y: scroll;
+	height: 100%;
+}
+
+body {
+	padding-top: 60px;
+	position: relative;
+/*	min-height: -moz-calc(100% - 5px);
+	min-height: -webkit-calc(100% - 5px);
+	min-height: -o-calc(100% - 5px);
+	min-height: calc(100% - 5px);
+	min-width: 400px;*/
+	padding-bottom: 20px;
+	overflow: auto;
+}
