@@ -40,3 +40,6 @@ gem 'spring',        group: :development
 
 # Use bootstrap
 gem 'bootstrap-sass'
+
+# Auth gem
+gem 'devise'
