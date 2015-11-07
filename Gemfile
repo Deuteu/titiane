@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+# Heroku reco
+ruby '2.0.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.1'
@@ -42,3 +44,6 @@ gem 'spring',        group: :development
 
 # Use bootstrap
 gem 'bootstrap-sass'
+
+# Heroku reco
+gem 'rails_12factor', group: :production
