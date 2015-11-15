@@ -1,28 +1,31 @@
-<header>
-	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-		<div class="container-fluid">
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
-					<span class="sr-only">Toggle navigation</span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-				<%= link_to app_title, '/',  class: "navbar-brand", id: "brand" %>
-			</div>
-
-			<div class="collapse navbar-collapse" id="navbar-collapse">
-				<ul class="nav navbar-nav">
-				</ul>
-				<ul class="nav navbar-nav navbar-right">
-					<li>
-						<%= link_to(help_path) do %>
-							<!-- <i class="glyphicon glyphicon-question-sign"></i> -->
-							Aide
-						<% end %>
-					</li>
-				</ul>
-			</div>
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle menu" data-toggle="collapse" data-target="#navbar-menu">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<button type="button" class="navbar-toggle settings" data-toggle="collapse" data-target="#navbar-settings">
+				<%= fa_icon "cog" %>
+			</button>
+			<%= link_to app_title, '/',  class: "navbar-brand", id: "brand" %>
 		</div>
-	</nav>
-</header>
+
+		<div class="collapse navbar-collapse" id="navbar-settings">
+			<ul class="nav navbar-nav navbar-right">
+				<li>
+					<%= link_to(help_path) do %>
+						<%= fa_icon "question-circle", text: "Aide" %>
+					<% end %>
+				</li>
+				<li>
+					<%= link_to(logout_path) do %>
+						<%= fa_icon "sign-out", text: "Déconnexion" %>
+					<% end %>
+				</li>
+			</ul>
+		</div>
+	</div>
+</nav>

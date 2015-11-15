@@ -12,24 +12,98 @@
  *
  *= require_tree .
  *= require_self
+ *= require font-awesome
  */
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+/*** GENERAL ***/
 html {
-	overflow-y: scroll;
+	/*overflow-y: scroll;*/
 	height: 100%;
 }
 
 body {
 	padding-top: 60px;
 	position: relative;
-/*	min-height: -moz-calc(100% - 5px);
-	min-height: -webkit-calc(100% - 5px);
-	min-height: -o-calc(100% - 5px);
-	min-height: calc(100% - 5px);
-	min-width: 400px;*/
-	padding-bottom: 20px;
+	height: 100%;
 	overflow: auto;
+	max-width: 100%;
+	overflow-x: hidden;
+	/*display: inline-flex;*/
+}
+
+/*** HEADER ***/
+header .navbar {
+	.navbar-header {
+		.navbar-toggle {
+			&.menu {
+				float: left;
+				margin-right: 0px;
+				margin-left: 15px;
+			}
+
+			&.settings {
+				line-height: 0;
+			}
+		}
+	}
+}
+
+/*** NAVBAR ***/
+#navbar-menu {
+	position: absolute;
+	margin-top: -10px;
+	height: calc(100% - 50px) !important;
+	width: 160px;
+	background-color: #222222;
+	color: #333333;
+
+	li {
+		width: 100%;
+
+		a:hover {
+			color: white;
+			background-color: transparent;
+		}
+	}
+}
+
+#navbar-menu + .content {
+	width: 100%;
+}
+
+#navbar-menu.in + .content {
+	right: -170px;
+	position: absolute;
+}
+
+@media (min-width: 768px) {
+	#navbar-menu + .content {
+		padding-left: 170px;
+	}
+}
+
+/*** ***/
+/* Overwrite Bootsraap */
+a:hover, a:focus {
+  color: inherit;
+  text-decoration: inherit;
+  background-color: #9d9d9d;
+}
+
+i.fa-trash-o{
+	color: #df3e3e;
+}
+
+/*** INDEX ***/
+table.index {
+	span.actions {
+		display: none;
+		float: right;
+	}
+	tr:hover span.actions {
+		display: block;
+	}
 }
