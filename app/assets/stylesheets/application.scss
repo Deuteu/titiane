@@ -74,11 +74,6 @@ header .navbar {
 	width: 100%;
 }
 
-#navbar-menu.in + .content {
-	right: -170px;
-	position: absolute;
-}
-
 @media (min-width: 768px) {
 	#navbar-menu + .content {
 		padding-left: 170px;

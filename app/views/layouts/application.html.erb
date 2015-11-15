@@ -15,7 +15,7 @@
 
 	<div class="collapse navbar-collapse" id="navbar-menu">
 		<ul class="nav navbar-nav navbar-left">
-			<li><%= link_to "data" %></li>
+			<li><%= link_to "data", "data" %></li>
 			<li><a href="">Lien 2</a></li>
 			<li><a href="">Lien 3</a></li>
 			<li><a href="">Lien 4</a></li>
@@ -28,12 +28,17 @@
 
 	<div class="content">
 
-		<div class="flash-mesages" style="position: absolute">
-			<!-- Devise need flash message -->
-			<!-- TODO: Fix css, useless padding on alert when empty -->
-			<p class="notice"><%= notice %></p>
-			<p class="alert"><%= alert %></p>
-		</div>
+		<!-- Devise need flash message -->
+		<% if flash[:notice] %>
+			<div class="alert alert-success" role="alert">
+				<%= flash[:notice] %>
+			</div>
+		<% end %>
+		<% if flash[:alert] %>
+			<div class="alert alert-warning" role="alert">
+				<%= flash[:alert] %>
+			</div>
+		<% end %>
 
 		<div class="container-fluid">
 			<%= yield %>

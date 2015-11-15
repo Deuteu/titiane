@@ -15,16 +15,25 @@
 
 		<div class="collapse navbar-collapse" id="navbar-settings">
 			<ul class="nav navbar-nav navbar-right">
+				<% if not user_signed_in? %>
+					<li>
+						<%= link_to(login_path) do %>
+							<%= fa_icon "sign-in", text: "Connexion" %>
+						<% end %>
+					</li>
+				<% end %>
 				<li>
 					<%= link_to(help_path) do %>
 						<%= fa_icon "question-circle", text: "Aide" %>
 					<% end %>
 				</li>
-				<li>
-					<%= link_to(logout_path) do %>
-						<%= fa_icon "sign-out", text: "Déconnexion" %>
-					<% end %>
-				</li>
+				<% if user_signed_in? %>
+					<li>
+						<%= link_to(logout_path) do %>
+							<%= fa_icon "sign-out", text: "Déconnexion" %>
+						<% end %>
+					</li>
+				<% end %>
 			</ul>
 		</div>
 	</div>
