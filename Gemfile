@@ -53,3 +53,6 @@ gem 'devise'
 
 # Font icon
 gem "font-awesome-rails"
+
+# SSL
+gem 'rack-ssl-enforcer', group: :production
