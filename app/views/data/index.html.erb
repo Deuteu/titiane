@@ -1,0 +1,35 @@
+<h1>Data</h1>
+
+<table class="table index">
+  <thead>
+    <tr>
+      <th colspan="1"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @data.each do |datum| %>
+      <tr>
+        <td>
+          <%= link_to edit_datum_path(datum) do %>
+            <%= datum.id %>
+          <% end %>
+          <span class="actions">
+            <%= link_to edit_datum_path(datum)  do %>
+              <%= fa_icon "edit", title: "Editer" %>
+            <% end %>
+            <%= link_to datum, method: :delete, data: { confirm: 'Êtes-vous sûr ?' } do %>
+              <%= fa_icon "trash-o", title: "Supprimer" %>
+            <% end %>
+          </span>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to new_datum_path do %>
+  <%= fa_icon "plus", title: "Ajouter", text: "Ajouter" %>
+<% end %>

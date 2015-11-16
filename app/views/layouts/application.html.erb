@@ -2,6 +2,7 @@
 <html>
 <head>
 	<title><%= full_title(yield(:title))%></title>
+	<meta name="viewport" content="width=device-width" />
 	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
 	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 	<%= csrf_meta_tags %>
@@ -12,13 +13,36 @@
 		<%= render "layouts/header" %>
 	</header>
 
-	<div class="container-fluid">
-		
-		<!-- Devise need flash message -->
-		<p class="notice"><%= notice %></p>
-		<p class="alert"><%= alert %></p>
+	<div class="collapse navbar-collapse" id="navbar-menu">
+		<ul class="nav navbar-nav navbar-left">
+			<li><%= link_to "data", "data" %></li>
+			<li><a href="">Lien 2</a></li>
+			<li><a href="">Lien 3</a></li>
+			<li><a href="">Lien 4</a></li>
+			<li><a href="">Lien 5</a></li>
+			<li><a href="">Lien 6</a></li>
+			<li><a href="">Lien 7</a></li>
+			<li><a href="">Lien 8</a></li>
+		</ul>
+	</div>
 
-		<%= yield %>
+	<div class="content">
+
+		<!-- Devise need flash message -->
+		<% if flash[:notice] %>
+			<div class="alert alert-success" role="alert">
+				<%= flash[:notice] %>
+			</div>
+		<% end %>
+		<% if flash[:alert] %>
+			<div class="alert alert-warning" role="alert">
+				<%= flash[:alert] %>
+			</div>
+		<% end %>
+
+		<div class="container-fluid">
+			<%= yield %>
+		</div>
 	</div>
 
 	<footer>

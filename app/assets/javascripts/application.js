@@ -15,3 +15,14 @@
 //= require turbolinks
 //= require_tree
 //= require bootstrap-sprockets
+
+$(document).ready(function () {
+    $(document).click(function (event) {
+        var clickover = $(event.target);
+        var _opened = $(".navbar-collapse").hasClass("in");
+        if (_opened === true && !clickover.hasClass("navbar-toggle")) {
+            $(".navbar-collapse.in").collapse('toggle');
+        }
+        //$('#navbar-settings').collapse('toggle')
+    });
+});

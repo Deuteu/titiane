@@ -50,3 +50,9 @@ gem 'rails_12factor', group: :production
 
 # Auth gem
 gem 'devise'
+
+# Font icon
+gem "font-awesome-rails"
+
+# SSL
+gem 'rack-ssl-enforcer', group: :production
