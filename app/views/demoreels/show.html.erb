@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @demoreel.title %>
+</p>
+
+<p>
+  <strong>Link:</strong>
+  <%= @demoreel.link %>
+</p>
+
+<%= link_to 'Edit', edit_demoreel_path(@demoreel) %> |
+<%= link_to 'Back', demoreels_path %>

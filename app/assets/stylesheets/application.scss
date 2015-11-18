@@ -85,7 +85,8 @@ header .navbar {
 a:hover, a:focus {
   color: inherit;
   text-decoration: inherit;
-  background-color: #9d9d9d;
+  font-weight: bold;
+  background-color: transparent; //#9d9d9d;
 }
 
 i.fa-trash-o{
@@ -94,11 +95,18 @@ i.fa-trash-o{
 
 /*** INDEX ***/
 table.index {
+	width: 550px;
+	
 	span.actions {
 		display: none;
 		float: right;
 	}
-	tr:hover span.actions {
-		display: block;
+	tr:hover, tr:hover {
+		span.actions {
+			display: block;
+		}
+		a {
+			font-weight: bold;
+		}
 	}
 }

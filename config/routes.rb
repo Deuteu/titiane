@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  resources :data
+  resources :demoreels
 
   root "static_pages#home"
 
