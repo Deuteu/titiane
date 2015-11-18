@@ -1,14 +1,14 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Title:</strong>
+  <strong><%= trans_cap('title') + t('typo.semi') %></strong>
   <%= @demoreel.title %>
 </p>
 
 <p>
-  <strong>Link:</strong>
+  <strong><%= trans_cap('link') + t('typo.semi') %></strong>
   <%= @demoreel.link %>
 </p>
 
-<%= link_to 'Edit', edit_demoreel_path(@demoreel) %> |
-<%= link_to 'Back', demoreels_path %>
+<%= link_to trans_cap('data.edit'), edit_demoreel_path(@demoreel) %> |
+<%= link_to trans_cap('data.index'), demoreels_path %>

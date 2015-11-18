@@ -19,23 +19,25 @@
 # To learn more, please read the Rails Internationalization guide
 # available at http://guides.rubyonrails.org/i18n.html.
 
-en:
+# TODO : Use t().capitalize or t(hello)/t(Hello) ?
+
+fr:
   typo:
-    semi: ":"
-  hello: "hello world"
-  help: "help"
+    semi: " :" # TODO: Put &nbsp;
+  hello: "bonjour le monde"
+  help: "aide"
   auth:
-    login: "log in"
-    logout: "log out"
-  title: "title"
-  link: "link"
-  back: "back"
-  error: "error"
-  submit: "submit"
+    login: "connexion"
+    logout: "déconnexion"
+  title: "titre"
+  link: "lien"
+  back: "retour"
+  error: "erreur"
+  submit: "valider"
   data:
-    index: "all"
-    show: "show"
-    edit: "edit"
-    delete: "delete"
-    confirm: "are you sure?"
-    add: "add"
+    index: "index" # TODO: Improve
+    show: "aperçu"
+    edit: "éditer"
+    delete: "supprimer"
+    confirm: "êtes-vous sûre ?"
+    add: "ajouter"

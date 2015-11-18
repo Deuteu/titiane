@@ -3,7 +3,7 @@
 <table class="table index">
   <thead>
     <tr>
-      <th>Titre</th>
+      <th><%= trans_cap('title') %></th>
     </tr>
   </thead>
 
@@ -16,10 +16,10 @@
           <% end %>
           <span class="actions">
             <%= link_to edit_demoreel_path(demoreel)  do %>
-              <%= fa_icon "edit", title: "Editer" %>
+              <%= fa_icon "edit", title: trans_cap('data.edit') %>
             <% end %>
-            <%= link_to demoreel, method: :delete, data: { confirm: 'Êtes-vous sûr ?' } do %>
-              <%= fa_icon "trash-o", title: "Supprimer" %>
+            <%= link_to demoreel, method: :delete, data: { confirm: trans_cap('data.confirm') } do %>
+              <%= fa_icon "trash-o", title: trans_cap('data.delete') %>
             <% end %>
           </span>
         </td>
@@ -31,5 +31,5 @@
 <br>
 
 <%= link_to new_demoreel_path do %>
-  <%= fa_icon "plus", title: "Ajouter", text: "Ajouter" %>
+  <%= fa_icon "plus", title: trans_cap('data.add'), text: trans_cap('data.add') %>
 <% end %>

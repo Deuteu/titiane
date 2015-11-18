@@ -1,7 +1,7 @@
 module ApplicationHelper
 
 	def app_title
-		"AppliTest"
+		"Titiane"
 	end
 
 	# Returns the full title on a per-page basis.
@@ -14,5 +14,8 @@ module ApplicationHelper
 		end
 	end
 
+	def trans_cap(key)
+		return t(key).mb_chars.capitalize
+	end
 
 end

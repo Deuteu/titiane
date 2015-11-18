@@ -22,5 +22,8 @@ module Applitest
 
     # Hero reco
     config.serve_static_assets = true
+
+    # Locale
+    config.i18n.default_locale = :fr
   end
 end

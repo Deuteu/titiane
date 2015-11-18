@@ -18,19 +18,19 @@
 				<% if not user_signed_in? %>
 					<li>
 						<%= link_to(login_path) do %>
-							<%= fa_icon "sign-in", text: "Connexion" %>
+							<%= fa_icon "sign-in", text: trans_cap('auth.login') %>
 						<% end %>
 					</li>
 				<% end %>
 				<li>
 					<%= link_to(help_path) do %>
-						<%= fa_icon "question-circle", text: "Aide" %>
+						<%= fa_icon "question-circle", text: trans_cap('help') %>
 					<% end %>
 				</li>
 				<% if user_signed_in? %>
 					<li>
 						<%= link_to(logout_path) do %>
-							<%= fa_icon "sign-out", text: "Déconnexion" %>
+							<%= fa_icon "sign-out", text: trans_cap('auth.logout') %>
 						<% end %>
 					</li>
 				<% end %>
