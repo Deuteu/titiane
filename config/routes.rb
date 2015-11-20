@@ -1,8 +1,12 @@
 Rails.application.routes.draw do
 
-  resources :demoreels
+  get 'contacts/show'
 
   root "static_pages#home"
+
+  get '/home' => 'static_pages#home'
+  get '/help' => 'static_pages#help'
+  get '/private' => 'private_pages#private'
 
   devise_for :users, controllers: { sessions: "users/sessions" }
   # Default devise route
@@ -30,9 +34,13 @@ Rails.application.routes.draw do
     get "logout", to: "devise/sessions#destroy"
   end
 
-  get '/home' => 'static_pages#home'
-  get '/help' => 'static_pages#help'
-  get '/private' => 'private_pages#private'
+  resources :demoreels
+
+  get '/contacts', to: "contacts#index", as: "contacts"
+  get '/contacts/:id/edit(.:format)', to: "contacts#edit", as: "edit_contact"
+  get '/contacts/:id', to: "contacts#edit", as: "contact"
+  put '/contacts/:id(.:format)', to: "contacts#update"
+  patch '/contacts/:id(.:format)', to: "contacts#update"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

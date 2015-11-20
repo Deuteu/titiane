@@ -16,13 +16,9 @@
 	<div class="collapse navbar-collapse" id="navbar-menu">
 		<ul class="nav navbar-nav navbar-left">
 			<li><%= link_to "Demoreels", demoreels_path %></li>
-			<li><a href="">Lien 2</a></li>
-			<li><a href="">Lien 3</a></li>
-			<li><a href="">Lien 4</a></li>
-			<li><a href="">Lien 5</a></li>
-			<li><a href="">Lien 6</a></li>
-			<li><a href="">Lien 7</a></li>
-			<li><a href="">Lien 8</a></li>
+			<li><%= link_to "Productions", root_path %></li>
+			<li><%= link_to "CVs", root_path %></li>
+			<li><%= link_to "Contacts", contacts_path %></li>
 		</ul>
 	</div>
 
@@ -37,6 +33,11 @@
 		<% if flash[:alert] %>
 			<div class="alert alert-warning" role="alert">
 				<%= flash[:alert] %>
+			</div>
+		<% end %>
+		<% if flash[:error] %>
+			<div class="alert alert-danger" role="alert">
+				<%= flash[:error] %>
 			</div>
 		<% end %>
 

@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong><%= "Phone" + t('typo.semi') %></strong>
+  <%= @phone.value %>
+  <%= link_to edit_contact_path(@phone)  do %>
+    <%= fa_icon "edit", title: trans_cap('data.edit') %>
+  <% end %>
+</p>
+
+<p>
+  <strong><%= "Mail" + t('typo.semi') %></strong>
+  <%= @mail.value %>
+  <%= link_to edit_contact_path(@mail)  do %>
+    <%= fa_icon "edit", title: trans_cap('data.edit') %>
+  <% end %>
+</p>
+
+<p>
+  <strong><%= "LinkedIn" + t('typo.semi') %></strong>
+  <%= @linkedin.value %>
+  <%= link_to edit_contact_path(@linkedin)  do %>
+    <%= fa_icon "edit", title: trans_cap('data.edit') %>
+  <% end %>
+</p>
