@@ -1,18 +1,11 @@
 <h1><%= @contact.key.capitalize %></h1>
 
 <%= form_for(@contact, url: contact_path(@contact), html: {method: "patch"}) do |f| %>
-  <% if @contact.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@contact.errors.count, t('error')) %> prohibited this setting from being saved:</h2>
-
-      <ul>
-      <% @contact.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+  <%= render 'errors', :contact => @contact %>
   
+  <div class="format">
+    <%= @contact.valid_format() %>
+  </div>
   <div class="field">
     <%= f.text_field :value %>
   </div>

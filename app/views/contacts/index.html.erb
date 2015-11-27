@@ -1,5 +1,6 @@
 <p id="notice"><%= notice %></p>
 
+<%= render 'errors', :contact => @phone %>
 <p>
   <strong><%= "Phone" + t('typo.semi') %></strong>
   <%= @phone.value %>
@@ -8,6 +9,7 @@
   <% end %>
 </p>
 
+<%= render 'errors', :contact => @mail %>
 <p>
   <strong><%= "Mail" + t('typo.semi') %></strong>
   <%= @mail.value %>
@@ -16,6 +18,7 @@
   <% end %>
 </p>
 
+<%= render 'errors', :contact => @linkedin %>
 <p>
   <strong><%= "LinkedIn" + t('typo.semi') %></strong>
   <%= @linkedin.value %>
