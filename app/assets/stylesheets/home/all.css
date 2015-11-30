@@ -246,7 +246,7 @@ header #name .visible-xs {
 }
 
 .thumbnails.legato {
-	background-image: url("Legato_Affiche_200_283.jpg");
+	background-image: image-url("Legato_Affiche_200_283.jpg");
 	margin: auto;
 }
 
