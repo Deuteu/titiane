@@ -25,5 +25,8 @@ module Applitest
 
     # Locale
     config.i18n.default_locale = :fr
+
+    # Font
+    config.assets.paths << Rails.root.join('app', 'assets', 'fonts')
   end
 end

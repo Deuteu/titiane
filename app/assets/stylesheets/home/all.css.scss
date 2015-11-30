@@ -2,14 +2,14 @@
 font-family: 'GrutchGrotesk Condensed Light';
 font-style: normal;
 font-weight: normal;
-src: local('GrutchGrotesk Condensed Light'), url('GrutchGrotesk-CondensedLight.woff') format('woff');
+src: font-url('GrutchGrotesk-CondensedLight.woff') format('woff');
 }
 
 @font-face {
 font-family: 'GrutchGroteskShaded Condensed Light';
 font-style: normal;
 font-weight: normal;
-src: local('GrutchGroteskShaded Condensed Light'), url('GrutchGroteskShaded-CondensedLight.woff') format('woff');
+src: font-url('GrutchGroteskShaded-CondensedLight.woff') format('woff');
 }
 
 
