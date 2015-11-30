@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :resumes
+
   get 'contacts/show'
 
   root "static_pages#home"

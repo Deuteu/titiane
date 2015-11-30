@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong><%= trans_cap('title') + t('typo.semi') %></strong>
+  <%= @resume.title %>
+</p>
+
+<p>
+  <strong>Language<%= t('typo.semi') %></strong>
+  <%= @resume.language %>
+</p>
+
+<%= link_to trans_cap('data.edit'), edit_resume_path(@resume) %> |
+<%= link_to trans_cap('data.index'), resumes_path %>

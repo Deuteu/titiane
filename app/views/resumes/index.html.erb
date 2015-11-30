@@ -1,0 +1,38 @@
+<h1>Listing resumes</h1>
+
+<table class="table index">
+  <thead>
+    <tr>
+      <th><%= trans_cap('title') %></th>
+      <th>Langue</th>
+      <!-- TODO: -->
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @resumes.each do |resume| %>
+      <tr>
+        <td class="title">
+          <%= link_to edit_resume_path(resume) do %>
+            <%= resume.title %>
+          <% end %>
+          <span class="actions">
+            <%= link_to edit_resume_path(resume)  do %>
+              <%= fa_icon "edit", title: trans_cap('data.edit') %>
+            <% end %>
+            <%= link_to resume, method: :delete, data: { confirm: trans_cap('data.confirm') } do %>
+              <%= fa_icon "trash-o", title: trans_cap('data.delete') %>
+            <% end %>
+          </span>
+        </td>
+        <td><%= language_options()[resume.language][0] %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to new_resume_path do %>
+  <%= fa_icon "plus", title: trans_cap('data.add'), text: trans_cap('data.add') %>
+<% end %>
