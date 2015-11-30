@@ -59,4 +59,4 @@ gem 'rack-ssl-enforcer', group: :production
 
 # Fileupload
 gem 'paperclip'
-gem 'aws-sdk'
+gem 'aws-sdk', '< 2.0'
