@@ -24,6 +24,7 @@ en:
     semi: ":"
   hello: "hello world"
   help: "help"
+  admin: "admin"
   auth:
     login: "log in"
     logout: "log out"

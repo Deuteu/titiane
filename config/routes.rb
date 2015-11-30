@@ -5,8 +5,7 @@ Rails.application.routes.draw do
   root "static_pages#home"
 
   get '/home' => 'static_pages#home'
-  get '/help' => 'static_pages#help'
-  get '/private' => 'private_pages#private'
+  get '/admin' => 'private_pages#admin'
 
   devise_for :users, controllers: { sessions: "users/sessions" }
   # Default devise route

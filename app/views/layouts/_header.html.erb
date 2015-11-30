@@ -23,8 +23,8 @@
 					</li>
 				<% end %>
 				<li>
-					<%= link_to(help_path) do %>
-						<%= fa_icon "question-circle", text: trans_cap('help') %>
+					<%= link_to(admin_path) do %>
+						<%= fa_icon "cog", text: trans_cap('admin') %>
 					<% end %>
 				</li>
 				<% if user_signed_in? %>

@@ -1,6 +1,6 @@
 class PrivatePagesController < ApplicationController
 	before_action :authenticate_user!
 
-	def private
+	def admin
 	end
 end

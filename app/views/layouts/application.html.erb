@@ -13,14 +13,16 @@
 		<%= render "layouts/header" %>
 	</header>
 
-	<div class="collapse navbar-collapse" id="navbar-menu">
-		<ul class="nav navbar-nav navbar-left">
-			<li><%= link_to "Demoreels", demoreels_path %></li>
-			<li><%= link_to "Productions", root_path %></li>
-			<li><%= link_to "CVs", root_path %></li>
-			<li><%= link_to "Contacts", contacts_path %></li>
-		</ul>
-	</div>
+	<% if user_signed_in? %>
+		<div class="collapse navbar-collapse" id="navbar-menu">
+			<ul class="nav navbar-nav navbar-left">
+				<li><%= link_to "Demoreels", demoreels_path %></li>
+				<li><%= link_to "Productions", root_path %></li>
+				<li><%= link_to "CVs", root_path %></li>
+				<li><%= link_to "Contacts", contacts_path %></li>
+			</ul>
+		</div>
+	<% end %>
 
 	<div class="content">
 
