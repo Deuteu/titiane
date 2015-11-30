@@ -10,5 +10,10 @@
   <%= @resume.language %>
 </p>
 
+<p>
+  <strong>CV<%= t('typo.semi') %></strong>
+  <%= @resume.cv.url %>
+</p>
+
 <%= link_to trans_cap('data.edit'), edit_resume_path(@resume) %> |
 <%= link_to trans_cap('data.index'), resumes_path %>

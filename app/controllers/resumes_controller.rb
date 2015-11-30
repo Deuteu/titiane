@@ -42,6 +42,6 @@ class ResumesController < ApplicationController
     end
 
     def resume_params
-      params.require(:resume).permit(:title, :language)
+      params.require(:resume).permit(:title, :language, :cv)
     end
 end

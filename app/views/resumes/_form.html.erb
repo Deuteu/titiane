@@ -19,6 +19,10 @@
     <%= f.label :language %><br>
     <%= f.select(:language, options_for_select(language_options)) %>
   </div>
+  <div class="field">
+    <%= f.label :cv %>
+    <%= f.file_field :cv %>
+  </div>
   <div class="actions">
     <%= f.submit %>
   </div>
