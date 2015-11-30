@@ -1,0 +1,10 @@
+/*
+ * This is a manifest file that'll be compiled into home.css, which will include all the files
+ * listed below.
+ *
+ *= require_self
+ */
+
+@import "home/bootstrap.min";
+@import "home/bootstrap-theme.min";
+@import "home/all";

@@ -1,0 +1,84 @@
+<% if user_signed_in? %>
+	<%= render 'layouts/header' %>
+<% end %>
+
+<div class="container demoreel">
+	<div class="top-header row">
+		<div id="name" class="col-xs-12 col-sm-9 col-md-9 col-lg-5 text-left">
+			<div class="visible-xs">
+				<h1>Titiane LEBEL</h1>
+			</div>
+			<div class="hidden-xs">
+				<h1>Titiane LEBEL</h1>
+			</div>
+		</div>
+		<div class="col-xs-12 col-sm-3 col-md-3 col-lg-7">
+			<!-- lg menu -->
+			<div class="visible-lg">
+				<div class="col-lg-4 text-center">
+					<h3 class="work-menu">Work</h3>
+				</div>
+				<div class="col-lg-4 text-center">
+					<h3 class="resume-menu">Resume</h3>
+				</div>
+				<div class="col-lg-4 text-center">
+					<h3 class="contact-menu">Contact</h3>
+				</div>
+			</div>
+			<!-- md&sm menu -->
+			<div class="visible-md visible-sm">
+				<div id="dropsmmd" class="menu-title dropdown-toggle" data-toggle="dropdown">
+					<h3>Menu</h3>
+				</div>
+				<div class="menu dropdown-menu" aria-labelledby="dropsmmd">
+					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-4 text-center">
+						<h4 class="work-menu">Work</h4>
+					</div>
+					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-4 text-center">
+						<h4 class="resume-menu">Resume</h4>
+					</div>
+					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-4 text-center">
+						<h4 class="contact-menu">Contact</h4>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="sub-header row">
+		<div class="col-xs-12 col-sm-5 col-md-5 col-lg-5 text-left">
+			<h2>FxArtist</h2>
+		</div>
+		<div class="work-submenu work col-xs-12 col-sm-7 col-md-7 col-lg-7 text-left hidden-xs" bottom="0px">
+			<div class="col-sm-6 col-md-6 col-lg-4 text-center">
+				<h4 class="demoreel-menu">Demoreel</h4>
+			</div>
+			<div class="col-sm-6 col-md-6 col-lg-4 text-center">
+				<h4 class="production-menu">Production</h4>
+			</div>
+		</div>
+	</div>
+
+	<!-- xs menu -->
+	<div class="visible-xs">
+		<div class="menu" style="display: none">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-4 text-center">
+				<h4 class="work-menu">Work</h4>
+				<div class="work-submenu col-xs-12 col-sm-7 col-md-7 col-lg-7 text-left visible-xs" bottom="0px">
+					<div class="col-xs-8 col-xs-offset-4 text-center">
+						<h4 class="demoreel-menu">Demoreel</h4>
+					</div>
+					<div class="col-xs-8 col-xs-offset-4 text-center">
+						<h4 class="production-menu">Production</h4>
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-4 text-center">
+				<h4 class="resume-menu">Resume</h4>
+			</div>
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-4 text-center">
+				<h4 class="contact-menu">Contact</h4>
+			</div>
+		</div>
+	</div>
+</div>

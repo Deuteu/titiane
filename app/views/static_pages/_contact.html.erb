@@ -1,0 +1,55 @@
+<div class="contact container-fluid">
+	<div class="visible-md visible-lg">
+		<div class="row text-center">
+			<div class="phone col-md-4 col-lg-4">
+				<a href="tel:
+<?php echo $phone; ?>">
+					<%= image_tag "contact/Icone_Phone.jpg", width:"112px", heigth: "97px"%><br>
+<?php echo $phone; ?>
+				</a>
+			</div>
+			<div class="mail col-md-4 col-lg-4">
+				<a href="mailto:
+<?php echo $mail; ?>">
+					<%= image_tag "contact/Icone_Mail.jpg", width:"112px", heigth: "97px"%><br>
+<?php echo $mail; ?>
+				</a>
+			</div>
+			<div class="linkedin col-md-4 col-lg-4">
+				<a target="_blank" href="
+<?php echo $linkedin; ?>">
+					<%= image_tag "contact/Icone_Linkedin.jpg", width:"112px", heigth: "97px"%><br>
+Titiane Lebel
+				</a>
+			</div>
+		</div>
+	</div>
+	<div class="visible-xs visible-sm">
+		<div class="row text-center">
+			<div class="phone col-xs-12 col-sm-12">
+				<a href="tel:
+<?php echo $phone; ?>">
+					<%= image_tag "contact/Icone_Phone.jpg", width:"112px", heigth: "97px"%>&nbsp;&nbsp;
+<?php echo $phone; ?>
+				</a>
+			</div>
+			<div class="mail col-xs-12 col-sm-12">
+				<a href="mailto:
+<?php echo $mail; ?>">
+					<%= image_tag "contact/Icone_Mail.jpg", width:"112px", heigth: "97px"%>&nbsp;&nbsp;
+<?php echo $mail; ?>
+				</a>
+			</div>
+		</div>
+		<div class="row text-center">
+			<div class="linkedin col-xs-12 col-sm-12">
+				<a target="_blank" href="
+<?php echo $linkedin; ?>">
+					<%= image_tag "contact/Icone_Linkedin.jpg", width:"112px", heigth: "97px"%>&nbsp;&nbsp;
+Titiane Lebel
+				</a>
+			</div>
+		</div>
+	</div>
+</div>
+
