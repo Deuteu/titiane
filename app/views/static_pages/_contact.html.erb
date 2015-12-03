@@ -1,25 +1,28 @@
+<%
+phone = Setting.find("phone").value
+mail = Setting.find("mail").value
+linkedin = Setting.find("linkedin").value
+
+%>
 <div class="contact container-fluid">
 	<div class="visible-md visible-lg">
 		<div class="row text-center">
 			<div class="phone col-md-4 col-lg-4">
-				<a href="tel:
-<?php echo $phone; ?>">
+				<a href="tel:<%= phone %>">
 					<%= image_tag "contact/Icone_Phone.jpg", width:"112px", heigth: "97px"%><br>
-<?php echo $phone; ?>
+					<%= phone %>
 				</a>
 			</div>
 			<div class="mail col-md-4 col-lg-4">
-				<a href="mailto:
-<?php echo $mail; ?>">
+				<a href="mailto:<%= mail %>">
 					<%= image_tag "contact/Icone_Mail.jpg", width:"112px", heigth: "97px"%><br>
-<?php echo $mail; ?>
+					<%= mail %>
 				</a>
 			</div>
 			<div class="linkedin col-md-4 col-lg-4">
-				<a target="_blank" href="
-<?php echo $linkedin; ?>">
+				<a target="_blank" href="<%= linkedin %>">
 					<%= image_tag "contact/Icone_Linkedin.jpg", width:"112px", heigth: "97px"%><br>
-Titiane Lebel
+					Titiane Lebel
 				</a>
 			</div>
 		</div>
@@ -27,26 +30,23 @@ Titiane Lebel
 	<div class="visible-xs visible-sm">
 		<div class="row text-center">
 			<div class="phone col-xs-12 col-sm-12">
-				<a href="tel:
-<?php echo $phone; ?>">
+				<a href="tel:<%= phone %>">
 					<%= image_tag "contact/Icone_Phone.jpg", width:"112px", heigth: "97px"%>&nbsp;&nbsp;
-<?php echo $phone; ?>
+					<%= phone %>
 				</a>
 			</div>
 			<div class="mail col-xs-12 col-sm-12">
-				<a href="mailto:
-<?php echo $mail; ?>">
+				<a href="mailto:<%= mail %>">
 					<%= image_tag "contact/Icone_Mail.jpg", width:"112px", heigth: "97px"%>&nbsp;&nbsp;
-<?php echo $mail; ?>
+					<%= mail %>
 				</a>
 			</div>
 		</div>
 		<div class="row text-center">
 			<div class="linkedin col-xs-12 col-sm-12">
-				<a target="_blank" href="
-<?php echo $linkedin; ?>">
+				<a target="_blank" href="<%= linkedin %>">
 					<%= image_tag "contact/Icone_Linkedin.jpg", width:"112px", heigth: "97px"%>&nbsp;&nbsp;
-Titiane Lebel
+					Titiane Lebel
 				</a>
 			</div>
 		</div>

@@ -15,7 +15,7 @@
             <%= production.title %>
           <% end %>
           <span class="actions">
-            <%= link_to edit_production_path(production)  do %>
+            <%= link_to edit_production_path(production) do %>
               <%= fa_icon "edit", title: trans_cap('data.edit') %>
             <% end %>
             <%= link_to production, method: :delete, data: { confirm: trans_cap('data.confirm') } do %>
