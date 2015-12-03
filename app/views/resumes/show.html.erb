@@ -12,7 +12,7 @@
 
 <p>
   <strong>CV<%= t('typo.semi') %></strong>
-  <%= link_to(@resume.cv.url) %>
+  <%= link_to @resume.cv_file_name, @resume.cv.url %>
 </p>
 
 <%= link_to trans_cap('data.edit'), edit_resume_path(@resume) %> |

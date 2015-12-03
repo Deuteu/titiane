@@ -21,7 +21,8 @@
   </div>
   <div class="field">
     <%= f.label :cv %>
-    <%= f.file_field :cv %>
+    <div class="format">PDF, moins de 10Mo</div>
+    <%= f.file_field :cv, accept: 'application/pdf' %>
   </div>
   <div class="actions">
     <%= f.submit %>

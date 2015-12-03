@@ -27,7 +27,7 @@
 
 <p>
   <strong>picture<%= t('typo.semi') %></strong>
-  <%= link_to(@production.picture.url) %>
+  <%= link_to @production.picture_file_name, @production.picture.url %>
 </p>
 
 <%= link_to trans_cap('data.edit'), edit_production_path(@production) %> |
