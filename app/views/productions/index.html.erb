@@ -1,0 +1,35 @@
+<h1>Listing productions</h1>
+
+<table class="table index">
+  <thead>
+    <tr>
+      <th><%= trans_cap('title') %></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @productions.each do |production| %>
+      <tr>
+        <td class="title">
+          <%= link_to edit_production_path(production) do %>
+            <%= production.title %>
+          <% end %>
+          <span class="actions">
+            <%= link_to edit_production_path(production)  do %>
+              <%= fa_icon "edit", title: trans_cap('data.edit') %>
+            <% end %>
+            <%= link_to production, method: :delete, data: { confirm: trans_cap('data.confirm') } do %>
+              <%= fa_icon "trash-o", title: trans_cap('data.delete') %>
+            <% end %>
+          </span>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to new_production_path do %>
+  <%= fa_icon "plus", title: trans_cap('data.add'), text: trans_cap('data.add') %>
+<% end %>

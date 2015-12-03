@@ -1,0 +1,45 @@
+<%= form_for(@production) do |f| %>
+  <% if @production.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@production.errors.count, "error") %> prohibited this production from being saved:</h2>
+
+      <ul>
+      <% @production.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :year %><br>
+    <div class="format">2010 ou plus</div>
+    <%= f.number_field :year %>
+  </div>
+  <div class="field">
+    <%= f.label :order %><br>
+    <div class="format">Entre 1 et 20</div>
+    <%= f.number_field :order %>
+  </div>
+  <div class="field">
+    <%= f.label :realisation %><br>
+    <%= f.text_field :realisation %>
+  </div>
+  <div class="field">
+    <%= f.label :link %><br>
+    <div class="format">Au format : http(s)://...</div>
+    <%= f.text_field :link %>
+  </div>
+  <div class="field">
+    <%= f.label :picture %>
+    <div class="format">Image, inférieure à 10Mo, proportion 200x282</div>
+    <%= f.file_field :picture, accept: 'image/png,image/gif,image/jpeg'%>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  year: 1
+  order: 1
+  title: MyString
+  realisation: MyString
+  link: MyString
+
+two:
+  year: 1
+  order: 1
+  title: MyString
+  realisation: MyString
+  link: MyString

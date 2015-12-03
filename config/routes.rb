@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :productions
+
   resources :resumes
 
   get 'contacts/show'
