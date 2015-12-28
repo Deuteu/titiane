@@ -13,22 +13,31 @@
 					</div>
 				</div>
 				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 center">
+					<% disposition = "col-xs-12"
+					if productions.size > 1
+						disposition += " col-sm-6"
+						if productions.size > 2
+							disposition += " col-md-6 col-lg-4"
+						end
+					end %>
 					<% productions.each do |production| %>
-						<div class="thumbnails"
-							style="
-								background-image: url('<%= production.picture.url %>');
-								background-size: 200px 283px;
-								margin: 10px auto;">
-							<div class="thumbnails-flipper">
-								<div class="thumbnails-bg">
-								</div>		
-								<div class="thumbnails-info">
-									<p class="movie-title"><%= production.title %></p>
-									<p class="movie-role"><%= production.realisation.html_safe %></p>
-									<% if not production.link.empty? %>
-									<!-- TODO: View it pas en dur -->
-										<p class="movie-link"><%= link_to "View it", production.link, target: "_blank" %></p>
-									<% end %>
+						<div class="<%= disposition %> center">
+							<div class="thumbnails"
+								style="
+									background-image: url('<%= production.picture.url %>');
+									background-size: 200px 283px;
+									margin: 10px auto;">
+								<div class="thumbnails-flipper">
+									<div class="thumbnails-bg">
+									</div>
+									<div class="thumbnails-info">
+										<p class="movie-title"><%= production.title %></p>
+										<p class="movie-role"><%= production.realisation.html_safe %></p>
+										<% if not production.link.empty? %>
+										<!-- TODO: View it pas en dur -->
+											<p class="movie-link"><%= link_to "View it", production.link, target: "_blank" %></p>
+										<% end %>
+									</div>
 								</div>
 							</div>
 						</div>
