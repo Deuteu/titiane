@@ -1,8 +1,7 @@
-<% en = retrieve_cv(0) %>
 <div class="resume container-fluid">
 	<div class="row text-center">
 		<div class="cv_us col-xs-12 col-sm-12">
-			<%= link_to en do %>
+			<%= link_to Resume.first().cv.url do %>
 				<%= image_tag "resume/Icone_USEN.jpg", width:"112px", heigth: "97px"%>&nbsp;&nbsp;Resume
 			<% end %>
 		</div>

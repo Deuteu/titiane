@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151203193508) do
+ActiveRecord::Schema.define(version: 20151228220800) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -39,7 +39,6 @@ ActiveRecord::Schema.define(version: 20151203193508) do
 
   create_table "resumes", force: true do |t|
     t.string   "title"
-    t.integer  "language"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "cv_file_name"

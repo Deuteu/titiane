@@ -16,10 +16,6 @@
     <%= f.text_field :title %>
   </div>
   <div class="field">
-    <%= f.label :language %><br>
-    <%= f.select(:language, options_for_select(language_options)) %>
-  </div>
-  <div class="field">
     <%= f.label :cv %>
     <div class="format">PDF, moins de 10Mo</div>
     <%= f.file_field :cv, accept: 'application/pdf' %>

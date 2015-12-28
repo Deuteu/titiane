@@ -18,7 +18,7 @@ class ResumesControllerTest < ActionController::TestCase
 
   test "should create resume" do
     assert_difference('Resume.count') do
-      post :create, resume: { language: @resume.language, title: @resume.title }
+      post :create, resume: { title: @resume.title }
     end
 
     assert_redirected_to resume_path(assigns(:resume))
@@ -35,7 +35,7 @@ class ResumesControllerTest < ActionController::TestCase
   end
 
   test "should update resume" do
-    patch :update, id: @resume, resume: { language: @resume.language, title: @resume.title }
+    patch :update, id: @resume, resume: { title: @resume.title }
     assert_redirected_to resume_path(assigns(:resume))
   end
 
