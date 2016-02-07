@@ -15,3 +15,4 @@
 //= require home/jquery-ui
 //= require home/jquery.quickflip.source
 //= require home/all
+//= require turbolinks
