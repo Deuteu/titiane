@@ -54,9 +54,6 @@ gem 'devise'
 # Font icon
 gem "font-awesome-rails"
 
-# SSL
-gem 'rack-ssl-enforcer', group: :production
-
 # Fileupload
 gem 'paperclip'
 gem 'aws-sdk', '< 2.0'
