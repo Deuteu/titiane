@@ -1,6 +1,6 @@
 <h1><%= @contact.key.capitalize %></h1>
 
-<%= form_for(@contact, url: contact_path(@contact), html: {method: "patch"}) do |f| %>
+<%= form_for(@contact, url: {controller: "contacts", action: "update"}, html: {method: "patch"}) do |f| %>
   <%= render 'errors', :contact => @contact %>
   
   <div class="format">

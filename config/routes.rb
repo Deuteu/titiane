@@ -2,16 +2,6 @@ Rails.application.routes.draw do
 
   root "static_pages#demoreel"
 
-  get '/home' => 'static_pages#home'
-  get '/admin' => 'private_pages#admin'
-
-  get '/work', to: redirect('/')
-  get '/demoreel' => 'static_pages#demoreel'
-  get '/production' => 'static_pages#production'
-  get '/resume' => 'static_pages#resume'
-  get '/contact' => 'static_pages#contact'
-
-
   devise_for :users, controllers: { sessions: "users/sessions" }
   # Default devise route
   devise_scope :user do
@@ -38,18 +28,21 @@ Rails.application.routes.draw do
     get "logout", to: "devise/sessions#destroy"
   end
 
-  namespace :admin do
+  scope :admin do
     resources :demoreels
     resources :productions
     resources :resumes
-
-    get 'contacts/show'
-    get '/contacts', to: "contacts#index", as: "contacts"
-    get '/contacts/:id/edit(.:format)', to: "contacts#edit", as: "edit_contact"
-    get '/contacts/:id', to: "contacts#edit", as: "contact"
-    put '/contacts/:id(.:format)', to: "contacts#update"
-    patch '/contacts/:id(.:format)', to: "contacts#update"
+    resources :contacts, only: [:index, :edit, :update]
   end
+
+  get '/home' => 'static_pages#home'
+  get '/admin' => 'private_pages#admin'
+
+  get '/work', to: redirect('/')
+  get '/demoreel' => 'static_pages#demoreel'
+  get '/production' => 'static_pages#production'
+  get '/resume' => 'static_pages#resume'
+  get '/contact' => 'static_pages#contact'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
